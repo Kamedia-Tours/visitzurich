@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tours with [Alex]</title>
+<style>
+  :root {
+    --blau: #1e3a8a;
+    --gelb: #facc15;
+    --weiss: #ffffff;
+  }
+  body {
+    margin: 0; font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--weiss);
+    color: var(--blau);
+    display: flex; flex-direction: column; min-height: 100vh;
+  }
+  header {
+    background-color: var(--blau);
+    color: var(--weiss);
+    padding: 1rem;
+    text-align: center;
+  }
+  main {
+    flex-grow: 1;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  h1 {
+    margin-top: 0;
+  }
+  .angebot {
+    background-color: var(--gelb);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    color: var(--blau);
+  }
+  form {
+    margin-top: 2rem;
+    display: flex; flex-direction: column;
+    gap: 0.8rem;
+  }
+  label {
+    font-weight: bold;
+  }
+  input, textarea {
+    padding: 0.5rem;
+    border: 1px solid var(--blau);
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  button {
+    background-color: var(--blau);
+    color: var(--weiss);
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #16427a;
+  }
+  footer {
+    background-color: var(--blau);
+    color: var(--weiss);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+  }
+  @media (max-width: 640px) {
+    main {
+      margin: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Touren mit [Dein Name]</h1>
+</header>
+
+<main>
+  <section>
+    <p>Herzlich willkommen! Ich biete spannende Stadtführungen und Erlebnis-Touren in und um Zürich an.  
+    Möchten Sie mehr erfahren oder eine Tour buchen? Nutzen Sie das Kontaktformular oder rufen Sie mich an.</p>
+  </section>
+
+  <section class="angebot">
+    <h2>Unsere Angebote</h2>
+    <ul>
+      <li>2-Stunden-Stadtführung – CHF 60</li>
+      <li>Kulinarische Tour mit Verkostung – CHF 80</li>
+      <li>Individuelle Privatführung – Preis auf Anfrage</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Kontakt</h2>
+    <p>Telefon: <a href="tel:+41791234567">+41 79 123 45 67</a></p>
+    <form id="kontaktformular" action="https://formspree.io/f/mayvwjyr" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">E-Mail</label>
+      <input type="email" id="email" name="_replyto" required />
+
+      <label for="nachricht">Nachricht</label>
+      <textarea id="nachricht" name="message" rows="4" required></textarea>
+
+      <button type="submit">Absenden</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 [Dein Name]. Alle Rechte vorbehalten.
+</footer>
+
+</body>
+</html>
