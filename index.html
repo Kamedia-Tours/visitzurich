@@ -12,15 +12,30 @@
       color: #000;
       line-height: 1.6;
     }
-    header {
-      background: #f0f0f0;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    header img {
-      max-width: 300px;
-      margin-top: 1rem;
-    }
+   header {
+  background-image: url('kamelbild.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dunkle Überlagerung für Lesbarkeit */
+  z-index: 0;
+}
+
+header h1,
+header h2 {
+  position: relative;
+  z-index: 1;
+}
     h1 {
       margin: 0;
       font-size: 2.5rem;
@@ -75,7 +90,6 @@
   <header>
     <h1>Kamedia-Tours</h1>
     <h2>Visit Zurich – Where there's so much water</h2>
-    <img src="kamelbild.png" alt="Kamel in Zürich">
   </header>
 
   <section>
